@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Playfair+Display:wght@500&family=Signika+Negative:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+#image{
+    overflow:hidden;
+    height:80vh;
+    width:100vw;
+    margin-top: -70px;
+    z-index: 0;
+}
+#img{
+    height: 100%;
+    margin-top: -70px;
+    position: relative;
+    z-index: 0;
+}
+#img::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100vw;
+    height:100%;
+    background:rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+header{
+    box-shadow:0px 0px 15px rgb(118, 11, 150);
+}   
+nav{
+    border: 2px solid red;
+    background: transparent;
+    display: grid;
+    grid-template-columns: 10% 85% 5%;
+    z-index: 1;
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right:4%;
+    z-index: 2;
+}
+.button{
+    font-family: 'Signika Negative', sans-serif;
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin:14px 20px;
+    font-size:20px;
+    transition:6ms ease-in;
+}
+.active,.button:hover{
+    color: #1cee00;
+    text-decoration: underline;
+}
+.icon{
+    font-size:35px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    float: left;
+    clear: right;
+    margin-top: 2px;
+    margin-left:20px;
+    z-index: 1;
+}
+.icon i{
+    color: white;
+}
+#menu-btn{
+   display: flex;
+   justify-content: flex-end;
+   display: none;
+   padding:13px;
+   z-index: 1;
+}
+#menu-btn i{
+    color:white;
+    font-size: 30px;
+}
+.about{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 70vh;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+#aboutus-content{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+}
+#aboutus-content h2{
+   font-size: 40px;
+}
+#middle-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center;
+}
+.descripton{
+    width: 50%;
+    position: relative;
+    margin-left: 20px;
+    background: transparent;
+    overflow: hidden;
+    box-shadow: 10px 10px 15px rgb(114, 111, 111);
+}
+.descripton::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(120deg, #ddd423, #363236);
+    z-index: 0;
+}
+.descripton p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    z-index: 1;
+    color:white;
+    font-size: 18px;
+}
+#head{
+    margin: 20px 120px;
+    font-size:20px;
+}
+.campus-photo{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+.campus-photo div{
+    margin:7px 15px;
+    border: 1px solid rgb(220, 216, 216);
+}
+.campus-photo div img{
+    height: 200px;
+  
+}
+.content-description{
+    padding-left: 100px;
+    padding-right: 30px;
+}
+footer{
+    margin:20px 0 0 0; 
+    width: 100vw;
+    background-color: #343430;
+ 
+ }
+ #infocontainer{
+     display: flex;
+     flex-direction: row;
+     justify-content:space-around;
+ }
+ .footerinfo{
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin-top: 40px;
+ }
+ .footerinfo a,h3{
+    
+     color: white;
+ }
+ .footerinfo h3{
+     font-size:18px;
+ }
+ #footericon{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     margin-top: 20px;
+     z-index: 1;
+ }
+ #footericon i{
+     font-size:25px;
+     margin: 10px;
+     cursor: pointer;
+ }
+ #facebook i{
+     color: rgb(5, 56, 165);
+     background-color: white;
+ }
+ #linkedin i{
+     color: rgb(4, 45, 249);
+     background-color: white;
+ }
+ #twitter i{
+     color: rgb(10, 88, 133);
+     background-color: white;
+ }
+ #insta i{
+     color:rgb(238, 11, 140);
+     background-color: white;
+ }
+ #youtube i{
+     color: rgb(217, 12, 12);
+     background-color: white;
+ }
+ #extra{
+     display: flex;
+     justify-content: center;
+     color:rgb(8, 251, 8);
+     text-decoration: underline;
+     margin:10px;
+ }
+ @media only screen and (max-width:700px) {
+    #head{
+        margin:10px 20px;
+    }
+    #aboutus-content h2{
+        font-size: 30px;
+         
+    }
+    .descripton p{
+        font-size:13px;
+    }
+    .content-description{
+        font-size: 13px;
+    }
+    #middle-container img{
+       width:50%;
+    }
+    #menu-btn{
+    display:block;
+        display:flex;
+        justify-content: flex-end;
+        z-index: 2;
+    }
+    .btn{
+        background-image: linear-gradient(to right,rgb(165, 168, 62),rgb(38, 34, 41)); 
+        border: 0.4px solid rgb(175, 172, 172);
+        display: none;
+        position: absolute;
+        top:3em;
+        right:0.2em;
+        padding:0;
+        width: 150px;
+        border-radius:1px;
+    }
+    .display{
+        display: block;
+    }
+    .button{
+        display: block;
+        color:white;
+        margin:30px 10px;
+    }
+   .active{
+     color: #1fe405;
+    }
+    #head h2{
+     font-size:30px;
+    }
+    #head p{
+        font-size:15px;
+        margin-left: 20px;
+    } 
+    .content-description{
+        padding:10px;
+     }
+}
+@media only screen and (max-width:910px){  
+    .campus-photo  {
+        display: grid;
+        grid-template-columns:auto auto;
+    }
+
+ }
+  
+    
+@media only screen and (max-width:530px){  
+
+   .footerinfo a,h3{
+     font-size: 15px;
+  } 
+  #footericon i{
+    font-size: 20px;
+    margin: 10px;
+   }
+    #middle-container {
+        justify-content:flex-start;
+    }
+    #aboutus-content h2{
+        font-size: 26px;
+         
+    }
+    
+}
+
+@media only screen and (max-width:370px){  
+    #head h2{
+
+     font-size:25px;
+    }
+    #head p{
+        font-size:12px;
+        margin-left: 20px;
+    } 
+    #aboutus-content h2{
+        font-size: 17px;
+         
+    }
+    #aboutus-content p{
+       font-size: 14px;
+          
+    }
+    #campus-photo{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: flex-start;
+    }
+   #footericon i{
+    font-size: 20px;
+    margin: 10px;
+   }
+   .footerinfo a{
+      font-size: 10px;
+    } 
+    .footerinfo h3{ 
+        margin-top: 10px;
+        font-size:10px;
+    }
+    .campus-photo  {
+        display: grid;
+        grid-template-columns:auto;
+    } 
+   
+}
+
+   

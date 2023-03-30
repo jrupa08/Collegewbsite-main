@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body{
+            align-items: center;
+        }
+        form{
+            font-family: 'Times New Roman', Times, serif;
+            border:2px solid rgb(136, 128, 128);
+            border-radius: 7px;
+            background-color: rgb(243, 233, 170);
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 20px;
+            left: 30vw;
+            padding: 30px;
+            width: 600px;
+            height: 950px;
+        }
+        form div,input,textarea,select{
+            margin-bottom: 15px;
+        }
+        form input,select{
+            height:40px;
+            font-size:15px;
+        }
+        form label{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size:17px;
+            font-weight: bold;
+        }
+        form input ,textarea,select,button{
+            border: none;
+            outline: none;
+            box-shadow: 5px 5px 10px rgb(88, 88, 32);
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+        #gender input{
+           margin-top:15px;
+           margin-left:40px;
+           box-shadow: none;
+        }
+        #clear{
+            width:70px;
+            margin-top: 30px;
+            float: left;
+            clear: right;
+        }
+        #submit{
+            width: 70px;
+            position: absolute;
+            top: 940px;;
+            left: 540px;
+            height: 30px;
+            font-size: 15px;
+            background-color: rgb(82, 82, 126);
+        }
+
+    </style>
+</head>
+<body>
+        <form action="">
+            <h3>Registration Form</h3>
+            <label for="fname">FirstName</label>
+            <input type="text" id="fname">
+            <label for="Mname">Middle Name</label>
+            <input type="text" id="Mname">
+            <label for="lname">LastName</label>
+            <input type="text" id="lname">
+            <label for="address">Address</label>
+            <textarea name="address" id="address" cols="30" rows="5"></textarea>
+            <label for="dob">Date Of Birth</label>
+            <input type="date" id="dob" required>
+            <label>Gender</label>
+            <div id="gender">
+                <input type="radio" name="gender" >Male
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender" >Other
+            </div>    
+            <label for="nation">Nationality</label>
+            <select >
+                <option value="india">Indian</option>
+            </select>
+            <label for="mob">Mobile No</label>
+            <input type="number" id="mob" maxlength="10" required>
+
+            <label for="course">Course</label>
+            <select >
+                <option value="course">BSc(CS)</option>
+                <option value="course">BCA</option>
+                <option value="course">BTECH</option>
+                <option value="course">BBA</option>
+                <option value="course">MSc(CS)</option>
+                <option value="course">MTECH</option>
+                <option value="course">MCA</option>
+                <option value="course">MBA</option>
+            </select> 
+            <label for="College">Previous college_Name</label>
+            <input type="text" id="College">
+
+            <label for="percent">Percentage</label>
+            <input type="number" id="percentage">
+            <input type="reset" id="clear">
+            <button type="submit" id="submit" onclick="submit()"> Submit</button>
+        </form>
+
+       // <script>
+               var submit=document.getElementById("submit");
+               var fname=document.getElementById("fname");
+               var mob=document.getElementById("mob");
+               submit.addEventListener("click",function(){
+                  if(fname.value!=""&&mob.value!=""){
+                    alert("Your Form submited Successfully.Thank you!");
+                  }
+                  else{
+                    alert("please! fill the all details");
+                  }
+                  
+               });
+        </script>//
+</body>
+</html>
